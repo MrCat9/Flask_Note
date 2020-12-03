@@ -8,6 +8,8 @@ https://blog.csdn.net/dcrmg/article/details/81987808
 
 #### 2_Docker部署flask项目
 
+https://zhuanlan.zhihu.com/p/78432719
+
 https://blog.csdn.net/qq_35224503/article/details/98783809
 
 https://www.jianshu.com/p/84caf2a7a3ea
@@ -15,6 +17,20 @@ https://www.jianshu.com/p/84caf2a7a3ea
 删除Docker镜像 https://www.cnblogs.com/quanxiaoha/p/10542278.html
 
 Dockerfile文件
+
+```dockerfile
+FROM python:3.6
+WORKDIR /project/flask_demo
+
+COPY requirements.txt ./
+RUN pip install -r requirements.txt
+RUN pip install dlib==19.19.0  # 直接放在requirements里安装会报错
+RUN pip install torch==1.4.0+cpu torchvision==0.5.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+
+COPY . .
+
+CMD ["gunicorn", "app:app", "-c", "./gunicorn.conf.py"]
+```
 
 ```dockerfile
 FROM python:3.6
