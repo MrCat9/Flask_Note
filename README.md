@@ -46,3 +46,6 @@ Flask实现跨域请求的处理方法 https://blog.csdn.net/wangshu_liang/artic
 
 Flask允许跨域 https://www.cnblogs.com/chnmig/p/9920693.html
 
+#### 4_flask服务gunicorn部署报错`Connection reset by peer`
+
+flask服务gunicorn部署压测的Connection reset by peer问题解决方式 https://blog.csdn.net/lizhe_dashuju/article/details/103169746
