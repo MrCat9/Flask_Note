@@ -40,6 +40,12 @@ RUN pip install -r /root/xxxx/flask_demo/requirements.txt -i https://pypi.douban
 ENTRYPOINT ["python","/root/xxxx/flask_demo/app.py"]
 ```
 
+#### 2_1_docker容器启动了，但是无法访问
+
+docker容器启动了,但是无法访问解决办法 https://blog.csdn.net/gaoxuechao123/article/details/103601487
+
+linux net.ipv4.ip_forward 数据包转发 https://blog.csdn.net/whatday/article/details/106003836/
+
 #### 3_flask允许跨域
 
 Flask实现跨域请求的处理方法 https://blog.csdn.net/wangshu_liang/article/details/86490137
